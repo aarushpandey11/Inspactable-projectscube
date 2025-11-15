@@ -1,0 +1,127 @@
+{#
+/**
+ * @file
+ * Front page template.
+ */
+#}
+
+<header class="site-header" role="banner">
+  <div class="header-container">
+
+    <div class="header-logo">
+      <a href="/" class="logo-link">
+        <div class="logo-icon">
+          <img 
+            src="/themes/custom/impactable/images/Link-1.png"
+            alt="IMPACTABLE Logo"
+            width="220"
+            height="40"
+          >
+        </div>
+      </a>
+    </div>
+
+    <div class="header-cta">
+      <a href="/contact" class="btn-contact">Contact Us</a>
+    </div>
+
+  </div>
+</header>
+
+
+{# Navigation Section #}
+<nav class="site-navigation" role="navigation">
+  <div class="navigation-container">
+    {{ page.header }}
+  </div>
+</nav>
+
+
+{# Banner Section #}
+<section class="banner-section"
+  style="
+    background: url('/themes/custom/impactable/images/Homepage-banner-image-2.jpg');
+    background-size: cover;
+    background-position: center;
+  "
+>
+  <div class="banner-container">
+    <div class="banner-content">
+      <h1 class="banner-title">Scaling Impact Investing</h1>
+      <p class="banner-subtitle">
+        Impactable provides impact investing solutions at institutional scale.
+      </p>
+      <a href="/learn-more" class="btn-learn-more">Learn More</a>
+    </div>
+  </div>
+</section>
+
+
+{# Three Cards Section #}
+<section class="three-cards-section">
+  <div class="container">
+    <div class="cards-grid">
+
+      {% for node in cardnodes %}
+        <div class="card">
+
+          <div class="card-icon">
+            <img 
+              src="/themes/custom/impactable/images/card-icon.png"
+              alt="Card Icon"
+              width="60"
+              height="60"
+            >
+          </div>
+
+          <h3 class="card-title">
+            {{ node.title.value }}
+          </h3>
+
+          <p class="card-description">
+            {{ node.body.value|raw }}
+          </p>
+
+        </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+
+{# Main Content #}
+<main id="main-content" class="main-content" role="main">
+
+  {{ page.content }}
+{{ drupal_entity('block', 'impactable_views_block__insight_view_block_1',  check_access=false) }}
+
+
+
+  {# What Are You Interested In Section #}
+  <section class="interested-section">
+    <div class="container">
+
+      <div class="interested-content">
+        <h2 class="section-title-white">What are you interested in?</h2>
+
+        <p class="section-subtitle-white">
+          We provide ambitious investors with the impact investment solutions
+          they need to achieve extraordinary results in Emerging Markets.
+        </p>
+
+        <div class="interested-form">
+          {{ drupal_entity('webform', 'interested-in') }}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+{# Footer #}
+<footer class="site-footer" role="contentinfo">
+  {{ page.footer }}
+</footer>

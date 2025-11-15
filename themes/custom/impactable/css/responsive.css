@@ -1,0 +1,198 @@
+/**
+ * @file
+ * Responsive stylesheet for Impactable theme.
+ */
+
+/* ===========================
+   Tablet Styles (768px - 1024px)
+   =========================== */
+@media screen and (max-width: 1024px) {
+  .banner-title {
+    font-size: 48px;
+  }
+  
+  .banner-subtitle {
+    font-size: 18px;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .about-grid {
+    gap: 40px;
+  }
+  
+  .insights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .section-title,
+  .section-title-center {
+    font-size: 36px;
+  }
+  
+  .footer-top {
+    gap: 40px;
+  }
+}
+
+/* ===========================
+   Mobile Styles (max 767px)
+   =========================== */
+@media screen and (max-width: 767px) {
+  /* Header */
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .logo-text {
+    font-size: 20px;
+  }
+  
+  /* Navigation */
+  .main-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .menu-item a {
+    padding: 15px 20px;
+    text-align: center;
+  }
+  
+  /* Banner */
+  .banner-section {
+    min-height: 500px;
+  }
+  
+  .banner-title {
+    font-size: 36px;
+  }
+  
+  .banner-subtitle {
+    font-size: 16px;
+  }
+  
+  .btn-learn-more {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+  
+  /* Three Cards */
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card {
+    padding: 30px 25px;
+  }
+  
+  /* About Section */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .section-title,
+  .section-title-center {
+    font-size: 28px;
+  }
+  
+  .about-intro,
+  .about-closing {
+    font-size: 16px;
+  }
+  
+  .feature-text h3 {
+    font-size: 18px;
+  }
+  
+  /* Insights Section */
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .insight-title {
+    font-size: 20px;
+  }
+  
+  /* Interested Section */
+  .section-title-white {
+    font-size: 28px;
+  }
+  
+  .section-subtitle-white {
+    font-size: 16px;
+  }
+  
+  .interested-form {
+    flex-direction: column;
+  }
+  
+  .form-group {
+    width: 100%;
+  }
+  
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-right {
+    align-items: flex-start;
+  }
+  
+  .footer-menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .btn-newsletter {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ===========================
+   Small Mobile (max 480px)
+   =========================== */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .banner-title {
+    font-size: 28px;
+  }
+  
+  .banner-subtitle {
+    font-size: 14px;
+  }
+  
+  .section-title,
+  .section-title-center,
+  .section-title-white {
+    font-size: 24px;
+  }
+  
+  .card {
+    padding: 25px 20px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+  }
+  
+  .btn-contact,
+  .btn-learn-more,
+  .btn-secondary,
+  .btn-newsletter,
+  .btn-submit {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

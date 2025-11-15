@@ -1,0 +1,44 @@
+{%
+  set classes = [
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}> 
+<section class="insights-section">
+  <div class="container">
+    <h2 class="section-title-center">Our Latest Insights</h2>
+    
+    <div class="insights-grid">
+  {{ attachment_before }}
+  {{ rows }}
+     </div>
+    
+    <div class="insights-cta">
+      <a href="/news-insights" class="btn-secondary">View All Insights</a>
+    </div>
+  </div>
+</section>
+   {% if rows -%}
+
+  
+
+  {% elseif empty -%}
+    {{ empty }}
+  {% endif %}
+  {{ pager }}
+
+  {{ attachment_after }}
+  {{ more }}
+
+  {% if footer %}
+    <footer>
+      {{ footer }}
+    </footer>
+  {% endif %}
+
+  {{ feed_icons }}
+ 
+ 
+
+</div>
+ 

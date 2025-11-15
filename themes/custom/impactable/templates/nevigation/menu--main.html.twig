@@ -1,0 +1,30 @@
+{% macro render_menu(items, level) %}
+  {% import _self as menus %}
+
+  {% if items %}
+    <ul class="{{ level == 0 ? 'main-menu' : 'dropdown-menu' }}">
+      {% for item in items %}
+        {% set classes = [
+          'menu-item',
+          item.in_active_trail ? 'active',
+          item.below ? 'has-children'
+        ] %}
+
+        <li class="{{ classes|join(' ') }}">
+          <a href="{{ item.url }}">{{ item.title }}</a>
+
+          {% if item.below %}
+            {{ menus.render_menu(item.below, level + 1) }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
+
+{% import _self as menus %}
+
+<div class="navigation-container">
+  {{ menus.render_menu(items, 0) }}
+</div>
+

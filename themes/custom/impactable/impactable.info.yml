@@ -1,0 +1,26 @@
+name: Impactable Theme
+type: theme
+description: 'A custom Drupal 10 theme for Impactable Group website'
+core_version_requirement: ^10
+base theme: false
+
+regions:
+  header: Header
+  header_menus: Header Menus
+  navigation: Navigation
+  banner: Banner
+  content: Content
+  footer: Footer
+
+libraries:
+  - impactable/global-styling
+
+libraries-override:
+  system/base:
+    css:
+      component:
+        /core/themes/stable9/css/system/components/ajax-progress.module.css: false
+
+libraries-extend:
+  core/drupal.dialog:
+    - impactable/dialog

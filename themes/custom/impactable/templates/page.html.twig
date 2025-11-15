@@ -1,0 +1,49 @@
+{#
+/**
+ * @file
+ * Page template.
+ */
+#}
+
+<header class="site-header" role="banner">
+  <div class="header-container">
+
+    <div class="header-logo">
+      <a href="/" class="logo-link">
+        <div class="logo-icon">
+          <img 
+            src="/themes/custom/impactable/images/Link-1.png"
+            alt="IMPACTABLE Logo"
+            width="220"
+            height="40"
+          >
+        </div>
+      </a>
+    </div>
+
+    <div class="header-cta">
+      <a href="/contact" class="btn-contact">Contact Us</a>
+    </div>
+
+  </div>
+</header>
+
+
+{# Navigation Section #}
+<nav class="site-navigation" role="navigation">
+  <div class="navigation-container">
+    {{ page.header }}
+  </div>
+</nav>
+
+
+{# Main Content #}
+<main id="main-content" class="main-content" role="main">
+  {{ page.content }}
+</main>
+
+
+{# Footer Section #}
+<footer class="site-footer" role="contentinfo">
+  {{ page.footer }}
+</footer>

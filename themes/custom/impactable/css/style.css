@@ -1,0 +1,709 @@
+/**
+ * @file
+ * Main stylesheet for Impactable theme.
+ */
+
+/* ===========================
+   Reset & Base Styles
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+/* ===========================
+   Header Styles
+   =========================== */
+.site-header {
+  background: linear-gradient(135deg, #003d7a 0%, #00294d 100%);
+  padding: 20px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo .logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  display: flex;
+}
+
+.logo-text {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.btn-contact {
+  background: #0099ff;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.btn-contact:hover {
+  background: #0077cc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 153, 255, 0.3);
+}
+
+/* ===========================
+   Navigation Styles
+   =========================== */
+/* =====================================
+   FIRST LEVEL NAVIGATION (TOP MENU BAR)
+===================================== */
+.site-navigation {
+  background: linear-gradient(135deg, #00294d 0%, #001a33 100%);
+  padding: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navigation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-menu {
+  list-style: none;
+  display: flex;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  position: relative;
+}
+
+/* First-level menu links */
+.menu-item > a {
+  color: #ffffff;
+  padding: 20px 25px;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+/* Hover + Active style */
+.menu-item:hover > a,
+.menu-item.active > a {
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom-color: #0099ff;
+}
+
+
+
+/* =====================================
+         SECOND LEVEL DROPDOWN 
+===================================== */
+.dropdown-menu {
+  list-style: none;
+
+  /* Position below first menu */
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  min-width: 240px;
+  padding: 0;
+  margin: 0;
+
+  /* Blue background (remove white box) */
+  background: linear-gradient(135deg, #00294d 0%, #001a33 100%);
+
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  display: none;
+  z-index: 999;
+}
+
+/* Dropdown visible on hover */
+.menu-item.has-children:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown menu items */
+.dropdown-menu .menu-item a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 15px;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Dropdown hover */
+.dropdown-menu .menu-item a:hover {
+  background: rgba(255,255,255,0.1);
+}
+.dropdown-icon {
+  font-size: 10px;
+  margin-left: 6px;
+  color: #0099ff;
+  transition: transform 0.2s ease;
+}
+
+/* rotate icon on hover */
+.menu-item.has-children:hover > a .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* keep text + icon aligned */
+.menu-item.has-children > a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+
+/* ===========================
+   Banner/Hero Section
+   =========================== */
+.banner-section {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+
+.banner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  width: 100%;
+}
+
+.banner-content {
+  max-width: 700px;
+}
+
+.banner-title {
+  color: white;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.banner-subtitle {
+  color: white;
+  font-size: 22px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.btn-learn-more {
+  background: #0099ff;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  display: inline-block;
+}
+
+.btn-learn-more:hover {
+  background: #0077cc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 153, 255, 0.4);
+}
+
+/* ===========================
+   Three Cards Section
+   =========================== */
+.three-cards-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #003d7a;
+  margin-bottom: 15px;
+}
+
+.card-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* ===========================
+   About Section
+   =========================== */
+.about-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #003d7a;
+  margin-bottom: 25px;
+}
+
+.about-intro {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.about-features {
+  margin: 30px 0;
+}
+
+.feature-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.feature-icon {
+  flex-shrink: 0;
+}
+
+.feature-text h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #003d7a;
+  margin-bottom: 8px;
+}
+
+.feature-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.about-closing {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin: 25px 0;
+}
+
+.btn-secondary {
+  border: 2px solid #003d7a;
+  color: #003d7a;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.btn-secondary:hover {
+  background: #003d7a;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.about-image .image-placeholder {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 531px !important;
+  width:  507px !important;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+/* ===========================
+   Insights Section
+   =========================== */
+.insights-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.section-title-center {
+  font-size: 42px;
+  font-weight: 700;
+  color: #003d7a;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.insight-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.image-placeholder img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.insight-image .image-placeholder {
+  width: 100%;
+}
+
+.insight-content {
+  padding: 25px;
+}
+
+.insight-date {
+  color: #0099ff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.insight-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #003d7a;
+  margin: 12px 0;
+  line-height: 1.4;
+}
+
+.insight-excerpt {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  color: #0099ff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.read-more:hover {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+.insights-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ===========================
+   Interested In Section
+   =========================== */
+.interested-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #003d7a 0%, #00294d 100%);
+  border-radius: 20px;
+  margin: 40px 0;
+}
+
+.interested-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title-white {
+  font-size: 42px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.section-subtitle-white {
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+  opacity: 0.95;
+  margin-bottom: 40px;
+}
+
+.interested-form {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-select,
+.form-input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.form-select option {
+  color: #333;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 15px 40px;
+  background: white;
+  color: #003d7a;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* ===========================
+   Footer Styles
+   =========================== */
+.site-footer {
+  background: #f8f9fa;
+  padding: 60px 0 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-logo .logo-text {
+  color: #003d7a;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+  max-width: 400px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: #003d7a;
+  transform: translateY(-3px);
+}
+
+.social-link:hover svg {
+  fill: white;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.footer-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-menu a {
+  color: #003d7a;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.footer-menu a:hover {
+  color: #0099ff;
+}
+
+.btn-newsletter {
+  background: #0099ff;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.btn-newsletter:hover {
+  background: #0077cc;
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ===========================
+   Utility Classes
+   =========================== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.skip-link:focus {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10000;
+  padding: 10px 20px;
+  background: #0099ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}

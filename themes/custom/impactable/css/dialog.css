@@ -1,0 +1,66 @@
+/**
+ * @file
+ * Dialog styles for Impactable theme.
+ */
+
+.ui-dialog {
+  background: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 0;
+}
+
+.ui-dialog-titlebar {
+  background: linear-gradient(135deg, #003d7a 0%, #00294d 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  border: none;
+}
+
+.ui-dialog-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.ui-dialog-titlebar-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+}
+
+.ui-dialog-titlebar-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ui-dialog-content {
+  padding: 30px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.ui-dialog-buttonpane {
+  background: #f8f9fa;
+  padding: 15px 20px;
+  border-radius: 0 0 10px 10px;
+  border-top: 1px solid #ddd;
+}
+
+.ui-dialog-buttonset button {
+  background: #0099ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ui-dialog-buttonset button:hover {
+  background: #0077cc;
+  transform: translateY(-2px);
+}

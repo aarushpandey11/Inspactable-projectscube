@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * About Impactable section template.
+ */
+#}
+<section class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content">
+        <h2 class="section-title">{{ paragraph.field_title.value|raw }}</h2>
+        {{ paragraph.field_discription.value|raw }}
+        
+        <a href="{{ paragraph.field_link.0.url }}" class="btn-secondary">{{ paragraph.field_link.title }} </a>
+      </div>
+      
+   {% set bg_url = file_url(paragraph.field_about_image.entity.field_media_image.0.entity.uri.value) %}
+ <div class="about-image">
+        
+<div class="image-placeholder" style="background-image: url('{{ bg_url }}');"></div></div>
+
+    </div>
+  </div>
+</section>
+

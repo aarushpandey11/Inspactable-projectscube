@@ -1,0 +1,29 @@
+<?php
+
+use Drupal\Core\Url;
+use Drupal\webform\WebformSubmissionInterface;
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function impactable_preprocess_node(&$variables) {
+
+  // Only load card nodes when rendering a node template.
+  if ($variables['node']->bundle() === 'card') {
+
+    // Query card content type.
+    $query1 = \Drupal::entityQuery('node')
+      ->condition('type', 'card')
+      ->accessCheck()
+      ->sort('created', 'ASC')
+      ->execute();
+
+    // Load the card nodes.
+    $cardnodes = \Drupal\node\Entity\Node::loadMultiple($query1);
+
+    // Pass card nodes to twig.
+    $variables['cardnodes'] = $cardnodes;
+  }
+}
+
